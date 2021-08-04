@@ -1,6 +1,7 @@
 package com.practice.controller;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +21,17 @@ public class MyController {
 
 		return "about";
 		// about.html
+	}
+
+	// handling iteration
+	@GetMapping("/example-loop")
+	public String iterateHandler(Model model) {
+
+		// create a list, set collection
+		List<String> names = List.of("ankit", "ramesh", "lokesh", "bipin", "chandan");
+		model.addAttribute("names", names);
+
+		return "iterate";
 	}
 
 }
