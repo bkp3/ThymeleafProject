@@ -51,6 +51,10 @@ public class MyController {
 	//hanlder for fragments
 	@GetMapping("/fragments")
 	public String fragmentHandler(Model m) {
+		
+		m.addAttribute("title","i like samosa");
+		m.addAttribute("subtitle","why so serious??");
+		
 		return "fragments";
 	}
 
