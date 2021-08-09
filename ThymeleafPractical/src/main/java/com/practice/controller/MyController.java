@@ -47,15 +47,21 @@ public class MyController {
 
 		return "condition";
 	}
-	
-	//hanlder for fragments
+
+	// hanlder for fragments
 	@GetMapping("/fragments")
 	public String fragmentHandler(Model m) {
-		
-		m.addAttribute("title","i like samosa");
-		m.addAttribute("subtitle","why so serious??");
-		
+
+		m.addAttribute("title", "i like samosa");
+		m.addAttribute("subtitle", "why so serious??");
+
 		return "fragments";
+	}
+
+	// handler for new about page
+	@GetMapping("/newabout")
+	public String newAbout() {
+		return "aboutnew";
 	}
 
 }
